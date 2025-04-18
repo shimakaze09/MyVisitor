@@ -2,7 +2,7 @@
 
 #include "Visitor.h"
 
-namespace My {
+namespace Smkz {
 // non-const visitor
 template <typename Ret, typename... Args>
 class Visitor<Ret(void*, Args...)> {
@@ -31,6 +31,6 @@ class Visitor<Ret(void*, Args...)> {
   std::unordered_map<std::size_t, std::function<Ret(void*, Args...)>>
       callbacks;  // ID -> func
 };
-}  // namespace My
+}  // namespace Smkz
 
 #include "details/ncVisitor.inl"

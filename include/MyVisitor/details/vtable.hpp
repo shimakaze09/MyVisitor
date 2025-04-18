@@ -3,7 +3,7 @@
 #include <cassert>
 #include <type_traits>
 
-namespace My::details {
+namespace Smkz::details {
 static const void* vtable(const void* ptr) noexcept {
   assert(ptr != nullptr);
   return *reinterpret_cast<const void* const*>(ptr);
@@ -50,4 +50,4 @@ static bool vtable_is(Base* ptr) noexcept {
   assert(ptr != nullptr);
   return vtable(ptr) == vtable_of<Derived>::get();
 }
-}  // namespace My::details
+}  // namespace Smkz::details

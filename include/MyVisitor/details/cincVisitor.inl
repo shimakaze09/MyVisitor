@@ -1,6 +1,6 @@
 #pragma once
 
-namespace My {
+namespace Smkz {
 template <typename Impl, typename Ret, typename... Args>
 Ret Visitor<Ret (Impl::*)(void*, Args...) const>::Visit(std::size_t ID,
                                                         void* ptr,
@@ -54,4 +54,4 @@ bool Visitor<Ret (Impl::*)(void*, Args...) const>::IsRegistered(
     const void* ptr) const {
   return IsRegistered(reinterpret_cast<std::size_t>(details::vtable(ptr)));
 }
-}  // namespace My
+}  // namespace Smkz

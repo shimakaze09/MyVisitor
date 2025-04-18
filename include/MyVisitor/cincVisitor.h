@@ -2,7 +2,7 @@
 
 #include "ncVisitor.h"
 
-namespace My {
+namespace Smkz {
 // const impl non-const visitor
 template <typename Impl, typename Ret, typename... Args>
 class Visitor<Ret (Impl::*)(void*, Args...) const>
@@ -36,6 +36,6 @@ class Visitor<Ret (Impl::*)(void*, Args...) const>
                      std::function<Ret(const Impl*, void*, Args...)>>
       impl_callbacks;
 };
-}  // namespace My
+}  // namespace Smkz
 
 #include "details/cincVisitor.inl"

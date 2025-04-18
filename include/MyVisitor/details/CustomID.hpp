@@ -4,7 +4,7 @@
 
 #include "vtable.hpp"
 
-namespace My::details {
+namespace Smkz::details {
 template <typename T>
 struct CustomID {
   // return custom ID of T
@@ -39,4 +39,4 @@ template <typename T>
 constexpr std::size_t CustomIDof(const T* ptr) noexcept {
   return CustomID<T>::get(ptr);
 }
-}  // namespace My::details
+}  // namespace Smkz::details

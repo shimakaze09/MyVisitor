@@ -5,7 +5,7 @@
 #include "details/CustomID.hpp"
 #include "details/vtable.hpp"
 
-namespace My::details {
+namespace Smkz::details {
 template <typename Impl>
 struct Accessor : std::conditional_t<std::is_final_v<Impl>,
                                      std::type_identity<void>, Impl> {
@@ -38,4 +38,4 @@ struct Accessor : std::conditional_t<std::is_final_v<Impl>,
     return static_cast<const Impl*>(ptr);
   }
 };
-}  // namespace My::details
+}  // namespace Smkz::details
