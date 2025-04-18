@@ -4,16 +4,6 @@ MESSAGE(STATUS "Config @PROJECT_NAME@ @PROJECT_VERSION@...")
 
 @MY_PACKAGE_INIT@
 
-IF (@My_MySRefl_Build_AutoRefl@)
-    INCLUDE("${CMAKE_CURRENT_LIST_DIR}/MySReflAutoRefl.cmake")
-ENDIF ()
- 
-IF (NOT @My_MySRefl_UseNameof@)
-    CPMAddPackage(
-        NAME nameof
-        GITHUB_REPOSITORY Neargye/nameof
-        GIT_TAG 0e8bec0
-    )
-ENDIF ()
+INCLUDE("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake" )
 
 MESSAGE(STATUS "Config @PROJECT_NAME@ @PROJECT_VERSION@ done")
